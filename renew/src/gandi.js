@@ -7,14 +7,14 @@ const SHARINGID = null;
 
 const superagent = require('superagent');
 if (! process.env.GANDI_API_TOKEN) {
-  throw new Error('Missing environement var GANDI_API_TOKEN');
+  throw new Error('Missing environment var GANDI_API_TOKEN');
 }
 const API_KEY = process.env.GANDI_API_TOKEN;
 
-// only set shqring_id query param if defined
+// only set sharing_id query param if defined
 const query = SHARINGID ? { sharing_id: SHARINGID } : {};
 
-// For some unkown reasons creating new entry was not working with GANDI 
+// For some unknown reasons creating new entry was not working with GANDI 
 // This code can only update entries
 
 async function update (domain, name, values, type = 'TXT', ttl = 300) {
