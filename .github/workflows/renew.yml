@@ -10,7 +10,6 @@ env:
   GANDI_API_TOKEN: ${{ secrets.GANDI_API_TOKEN }}
   ACME_ACCOUNT_URL: ${{ secrets.ACME_ACCOUNT_URL }}
   ACME_ACCOUNT_KEY: ${{ secrets.ACME_ACCOUNT_KEY }}
-  BACKLOOP_EMAIL: ${{ secrets.BACKLOOP_EMAIL }}
 
 jobs:
   build:
